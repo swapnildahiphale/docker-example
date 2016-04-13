@@ -6,10 +6,9 @@ var app = express();
 
 console.log(process.env.REDIS_PORT + ':' + process.env.REDIS_ADDRESS);
 
-APPROACH 1: Using environment variables created by Docker
 var client = redis.createClient(
-	process.env.REDIS_PORT,
-  	process.env.REDIS_ADDRESS
+	process.env.REDIS_PORT || 6379,
+  	process.env.REDIS_ADDRESS || redis
 );
 
 
