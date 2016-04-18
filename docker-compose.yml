@@ -12,18 +12,24 @@ node1:
         - redis
     ports:
         - "8080"
+    environment:
+        - MY_NAME="node1"
 node2:
     build: ./node
     links:
         - redis
     ports:
         - "8080"
+    environment:
+        - MY_NAME="node2"
 node3:
     build: ./node
     links:
         - redis
     ports:
         - "8080"
+    environment:
+        - MY_NAME="node3"
 redis:
     image: redis
     ports:
