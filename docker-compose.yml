@@ -5,7 +5,7 @@ nginx:
         - node2:node2
         - node3:node3
     ports:
-        - "80:80"
+        - "5555:80"
 node1:
     build: ./node
     links:
@@ -13,7 +13,7 @@ node1:
     ports:
         - "8080"
     environment:
-        - MY_NAME="node1"
+        - MY_NAME=node1
 node2:
     build: ./node
     links:
@@ -21,7 +21,7 @@ node2:
     ports:
         - "8080"
     environment:
-        - MY_NAME="node2"
+        - MY_NAME=node2
 node3:
     build: ./node
     links:
@@ -29,7 +29,7 @@ node3:
     ports:
         - "8080"
     environment:
-        - MY_NAME="node3"
+        - MY_NAME=node3
 redis:
     image: redis
     ports:
