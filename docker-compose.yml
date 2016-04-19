@@ -14,7 +14,6 @@ node1:
         - "8080"
     environment:
         - MY_NAME=node1
-        - TEST_URL=http://54.254.223.84:5555/
 node2:
     build: ./node
     links:
@@ -23,7 +22,6 @@ node2:
         - "8080"
     environment:
         - MY_NAME=node2
-        - TEST_URL=http://54.254.223.84:5555/
 node3:
     build: ./node
     links:
@@ -32,7 +30,6 @@ node3:
         - "8080"
     environment:
         - MY_NAME=node3
-        - TEST_URL=http://54.254.223.84:5555/
 redis:
     image: redis
     ports:
