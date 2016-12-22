@@ -9,4 +9,5 @@ docker rmi `docker images --filter 'dangling=true' -q --no-trunc` &> /dev/null |
 
 docker-compose build
 
+
 docker-compose --project-name=${JOB_NAME} up &
